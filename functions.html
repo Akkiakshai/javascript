@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 30px;
+        }
+        body{
+            background-color: pink;
+        }
+        p{
+            font-size:30px;
+        }
+        h1{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+       Greeting
+    </h1>
+    <label for="name">Enter Your Name</label>
+    <input id="name" type="text">
+     <br>
+      <br>
+    <button onclick="welcome()">Submit</button>
+    <p id="result"></p>
+    <h1>Multiplier</h1>
+    
+    <label for="first">Enter Your First Number</label>
+    <input id="first">
+    <br>
+     <br>
+    <label for="second">Enter Your Second Number</label>
+    <input id="second">
+     <br>
+      <br>
+    <button onclick="multi()">Submit</button>
+    <p id="res1"></p>
+    <h1>Enter A Number to Check Even OR Odd</h1>
+     <label for="first1">Enter Your First Number</label>
+    <input id="first1">
+     <br>
+      <br>
+    <button onclick="check()">Submit</button>
+    <p id="res2"></p>
+    <h1>Array Length Finder(Enter values with Commas to Seperate)</h1>
+    <label for="arr">Enter Elements Of An Array</label>
+    <input id="arr">
+     <br>
+      <br>
+    <button onclick="alen()">Submit</button>
+    <p id="res3"></p>
+    <script>
+        function welcome(){
+             let name = document.getElementById("name").value;
+            document.getElementById("result").innerHTML+="Hello "+name +" Welcome ";
+            
+        }    
+        function multi(){
+            let n=document.getElementById("first").value;
+            let m=document.getElementById("second").value;
+            document.getElementById("res1").innerHTML+="Multiplication of Two Numbers: "+ (m*n);
+        }
+        function check(){
+            let n=document.getElementById("first1").value;
+            if(n%2 == 0){
+            document.getElementById("res2").innerHTML+="Your Number Is Even";
+            }
+            else{
+                document.getElementById("res2").innerHTML+="Your Number Is Odd";
+            }
+        }
+        function alen()
+        {
+            let input=document.getElementById("arr").value;
+            let a=input.split(',');
+            document.getElementById("res3").innerHTML+="Length of Array is: "+a.length;
+        }    
+    </script>
+    
+</body>
+</html>
